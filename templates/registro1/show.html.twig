@@ -1,0 +1,154 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Registro1{% endblock %}
+
+{% block body %}
+    <h1>Registro1</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ registro1.id }}</td>
+            </tr>
+            <tr>
+                <th>FechaAsesoria</th>
+                <td>{{ registro1.fechaAsesoria ? registro1.fechaAsesoria|date('Y-m-d H:i:s') : '' }}</td>
+            </tr>
+            <tr>
+                <th>RadicadoCaso</th>
+                <td>{{ registro1.radicadoCaso }}</td>
+            </tr>
+            <tr>
+                <th>Area</th>
+                <td>{{ registro1.area }}</td>
+            </tr>
+            <tr>
+                <th>NombreCompleto</th>
+                <td>{{ registro1.nombreCompleto }}</td>
+            </tr>
+            <tr>
+                <th>DocumentoId</th>
+                <td>{{ registro1.documentoId }}</td>
+            </tr>
+            <tr>
+                <th>FechaExpedicion</th>
+                <td>{{ registro1.fechaExpedicion ? registro1.fechaExpedicion|date('Y-m-d H:i:s') : '' }}</td>
+            </tr>
+            <tr>
+                <th>Ocupacion</th>
+                <td>{{ registro1.ocupacion }}</td>
+            </tr>
+            <tr>
+                <th>Departamento</th>
+                <td>{{ registro1.departamento }}</td>
+            </tr>
+            <tr>
+                <th>Municipio</th>
+                <td>{{ registro1.municipio }}</td>
+            </tr>
+            <tr>
+                <th>Ciudad</th>
+                <td>{{ registro1.ciudad }}</td>
+            </tr>
+            <tr>
+                <th>Direccion</th>
+                <td>{{ registro1.direccion }}</td>
+            </tr>
+            <tr>
+                <th>Barrio</th>
+                <td>{{ registro1.barrio }}</td>
+            </tr>
+            <tr>
+                <th>TelFijo</th>
+                <td>{{ registro1.telFijo }}</td>
+            </tr>
+            <tr>
+                <th>TelCelular</th>
+                <td>{{ registro1.telCelular }}</td>
+            </tr>
+            <tr>
+                <th>Email</th>
+                <td>{{ registro1.email }}</td>
+            </tr>
+            <tr>
+                <th>Estrato</th>
+                <td>{{ registro1.estrato }}</td>
+            </tr>
+            <tr>
+                <th>Escolaridad</th>
+                <td>{{ registro1.escolaridad }}</td>
+            </tr>
+            <tr>
+                <th>NombreContacto</th>
+                <td>{{ registro1.nombreContacto }}</td>
+            </tr>
+            <tr>
+                <th>ParentescoContacto</th>
+                <td>{{ registro1.parentescoContacto }}</td>
+            </tr>
+            <tr>
+                <th>DireccionContacto</th>
+                <td>{{ registro1.direccionContacto }}</td>
+            </tr>
+            <tr>
+                <th>BarrioContacto</th>
+                <td>{{ registro1.barrioContacto }}</td>
+            </tr>
+            <tr>
+                <th>TelcelContacto</th>
+                <td>{{ registro1.telcelContacto }}</td>
+            </tr>
+            <tr>
+                <th>EmailContacto</th>
+                <td>{{ registro1.emailContacto }}</td>
+            </tr>
+            <tr>
+                <th>PreguntaConsultorio</th>
+                <td>{{ registro1.preguntaConsultorio ? 'Yes' : 'No' }}</td>
+            </tr>
+            <tr>
+                <th>Apoderado</th>
+                <td>{{ registro1.apoderado ? 'Yes' : 'No' }}</td>
+            </tr>
+            <tr>
+                <th>HechoCaso</th>
+                <td>{{ registro1.hechoCaso }}</td>
+            </tr>
+            <tr>
+                <th>MenoresCaso</th>
+                <td>{{ registro1.menoresCaso ? 'Yes' : 'No' }}</td>
+            </tr>
+            <tr>
+                <th>PorSerRegistro</th>
+                <td>{{ registro1.porSerRegistro ? 'Yes' : 'No' }}</td>
+            </tr>
+            <tr>
+                <th>PorSerPosibleSolucion</th>
+                <td>{{ registro1.porSerPosibleSolucion ? 'Yes' : 'No' }}</td>
+            </tr>
+            <tr>
+                <th>NoSeIntentara</th>
+                <td>{{ registro1.noSeIntentara ? 'Yes' : 'No' }}</td>
+            </tr>
+            <tr>
+                <th>FechaRegreso</th>
+                <td>{{ registro1.fechaRegreso ? registro1.fechaRegreso|date('Y-m-d H:i:s') : '' }}</td>
+            </tr>
+            <tr>
+                <th>Lugar</th>
+                <td>{{ registro1.lugar }}</td>
+            </tr>
+            <tr>
+                <th>TelfijoContacto</th>
+                <td>{{ registro1.telfijoContacto }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('registro1_index') }}">back to list</a>
+
+    <a href="{{ path('registro1_edit', {'id': registro1.id}) }}">edit</a>
+
+    {{ include('registro1/_delete_form.html.twig') }}
+{% endblock %}
